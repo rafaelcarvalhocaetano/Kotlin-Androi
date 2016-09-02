@@ -1,0 +1,60 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="br.com.rcc.lojavirtual.MainActivity">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Selecione o Livro para Comprar"
+        android:id="@+id/tvMensagem"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="CSharp"
+        android:id="@+id/cbCsharp"
+        android:checked="false"
+        android:layout_below="@+id/tvMensagem"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="92dp" />
+
+    <CheckBox
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="ANDROID"
+        android:id="@+id/cbAndroid"
+        android:layout_alignParentStart="true"
+        android:checked="false"
+        android:layout_below="@+id/cbCsharp"
+        android:layout_alignParentRight="true" />
+
+    <CheckBox
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Java"
+        android:id="@+id/cbJava"
+        android:layout_alignParentStart="true"
+        android:checked="false"
+        android:layout_below="@+id/cbAndroid"
+        android:layout_alignParentRight="true" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Comprar"
+        android:id="@+id/btComprar"
+        android:layout_below="@+id/cbJava"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="44dp" />
+
+</RelativeLayout>
