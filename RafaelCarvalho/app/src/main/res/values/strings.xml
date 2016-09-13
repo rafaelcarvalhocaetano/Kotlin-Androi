@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RafaelCarvalho</string>
+    <string name="medidas">Medidas :</string>
+    <string name="colheres">Colheres :</string>
+    <string name="ml">ml</string>
+    <string name="calcular">Calcular</string>
+</resources>
