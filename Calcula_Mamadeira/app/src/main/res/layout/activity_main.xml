@@ -9,4 +9,114 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="br.com.rcc.calcula_mamadeira.MainActivity">
 
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Calcular"
+        android:id="@+id/btnCalc"
+        android:layout_marginBottom="46dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="           Informe a quantidade (ml)"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="60 ml"
+        android:id="@+id/ck_60"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="52dp"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="90 ml"
+        android:id="@+id/ck_90"
+        android:layout_below="@+id/ck_60"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="120 ml"
+        android:id="@+id/ck_120"
+        android:layout_below="@+id/ck_90"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="180 ml"
+        android:id="@+id/ck_180"
+        android:checked="false"
+        android:layout_alignTop="@+id/ck_60"
+        android:layout_alignLeft="@+id/ck_270"
+        android:layout_alignStart="@+id/ck_270" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="210 ml"
+        android:id="@+id/ck_210"
+        android:layout_below="@+id/ck_180"
+        android:layout_alignLeft="@+id/ck_180"
+        android:layout_alignStart="@+id/ck_180"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="240 ml"
+        android:id="@+id/ck_240"
+        android:layout_alignTop="@+id/ck_120"
+        android:layout_alignLeft="@+id/ck_210"
+        android:layout_alignStart="@+id/ck_210"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="270 ml"
+        android:id="@+id/ck_270"
+        android:checked="false"
+        android:layout_below="@+id/ck_240"
+        android:layout_centerHorizontal="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="150 ml"
+        android:id="@+id/ck_150"
+        android:layout_below="@+id/ck_120"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="300 ml"
+        android:id="@+id/ck_300"
+        android:checked="false"
+        android:layout_alignTop="@+id/ck_180"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView" />
+
 </RelativeLayout>
