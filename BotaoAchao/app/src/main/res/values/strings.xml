@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BotaoAcao</string>
+    <string name="btn1">Button</string>
+    <string name="textview">TextView</string>
+</resources>
