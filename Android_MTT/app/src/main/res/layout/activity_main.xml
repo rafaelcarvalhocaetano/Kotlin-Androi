@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:layout_above="@+id/btnTexto"
+        android:layout_above="@+id/btnSenha"
         android:layout_centerHorizontal="true"
         android:id="@+id/senha" />
 
@@ -42,7 +42,7 @@
         android:text="Senha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnTexto"
+        android:id="@+id/btnSenha"
         android:layout_marginBottom="79dp"
         android:layout_above="@+id/tx2"
         android:layout_alignStart="@+id/btnNumero" />

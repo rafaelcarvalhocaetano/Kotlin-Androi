@@ -30,24 +30,23 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void btnNumero(View view){
-        String valorID = numero.getText().toString();
-        int num2 = Integer.parseInt(valorID);
-
-        if(num2%2==0){
-            tx2.setText("O número é PAR");
-        }else{
-            tx2.setText("O número é IMPAR");
-        }
-    }
     public void btnSenha(View view){
-        String senha1 = senha.getText().toString();
 
         if(senha.getText().equals("rafael")){
-
-            senha.setText("Senha Correta");
+            tx1.setText("Senha Correta");
         }else{
-            senha.setText("Senha Incorreta");
+            tx1.setText("Senha Incorreta");
+        }
+    }
+    public void btnNumero(View view){
+
+        String num = numero.getText().toString();
+        int n = Integer.parseInt(num);
+
+        if(n % 2 == 0){
+            tx2.setText("Senha Correta");
+        }else{
+            tx2.setText("Senha Incorreta");
         }
     }
 }
