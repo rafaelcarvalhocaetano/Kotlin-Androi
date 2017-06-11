@@ -38,8 +38,8 @@
         android:layout_toRightOf="@+id/textView3"
         android:layout_toEndOf="@+id/textView3"
         android:id="@+id/editText10"
-        android:layout_alignTop="@+id/textView3"
-        android:layout_above="@+id/textView5" />
+        android:layout_above="@+id/textView5"
+        android:layout_alignParentTop="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -49,7 +49,24 @@
         android:layout_toRightOf="@+id/textView5"
         android:layout_toEndOf="@+id/textView5"
         android:id="@+id/editText11"
-        android:layout_alignTop="@+id/textView5"
         android:layout_alignBottom="@+id/textView5" />
+
+    <Switch
+        android:text="Manter Conectado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:id="@+id/switch1"
+        android:layout_below="@+id/textView5"
+        android:layout_toRightOf="@+id/textView3"
+        android:layout_toEndOf="@+id/textView3" />
+
+    <Button
+        android:text="Logar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/switch1"
+        android:layout_marginTop="39dp"
+        android:id="@+id/button" />
 
 </RelativeLayout>
