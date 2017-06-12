@@ -1,1 +1,2 @@
-# Android_Projects
+### Projetos Android.
+Projeto desenvolvidos com foco
