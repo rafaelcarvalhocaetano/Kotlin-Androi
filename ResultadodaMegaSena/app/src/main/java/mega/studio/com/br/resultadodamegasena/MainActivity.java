@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
                 int gerar = rd.nextInt(59);
 
-                res.setText("Número para Mega-Sena: "+gerar);
+                res.setText("N° Mega-Sena: "+gerar);
 
             }
         });
