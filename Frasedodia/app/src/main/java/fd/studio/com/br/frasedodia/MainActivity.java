@@ -2,22 +2,22 @@ package fd.studio.com.br.frasedodia;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
 
     private Button btn;
     private TextView msg;
-    private String [] frases = {"Enquanto Deus for meu chão," +
-            "Não há quem me derrube","Da vida não quero muito. " +
-            "Quero apenas saber que tentei tudo o que quis, " +
-            "tive tudo o que pude, amei tudo o que valia " +
-            "e perdi apenas o que, no fundo, nunca foi meu",
-            "Ninguém vai bater mais forte do que a vida. " +
-                    "Não importa como você bate e sim o quanto aguenta apanhar e continuar lutando; " +
-                    "o quanto pode suportar e seguir em frente. É assim que se ganha"
+    private String [] frases = {
+            "Vitor",
+            "Heitor",
+            "Rose",
+            "Rafael"
     };
 
     @Override
@@ -28,7 +28,18 @@ public class MainActivity extends AppCompatActivity {
         btn = (Button) findViewById(R.id.btn);
         msg = (TextView) findViewById(R.id.tx);
 
-        msg.setText(frases[1]);
+       // msg.setText(frases[2]);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Random random = new Random();
+                int n = random.nextInt( frases.length);
+
+                msg.setText(frases[n]);
+
+            }
+        });
 
     }
 }
