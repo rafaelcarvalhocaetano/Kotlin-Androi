@@ -13,7 +13,7 @@ Projetos de lojas virtuais
 ### Games
 ### Adega
 
--### APP DIVERSIFICADOS
+### APP DIVERSIFICADOS
 
 - [Frase do dia](#frase-do-dia)
 - [Mega Sena](#mega-sena)
@@ -21,14 +21,16 @@ Projetos de lojas virtuais
 
 
 ### Frase do dia
+  Projeto envolvendo um simples aplicativo que gera frases aleatórias para o usuário. App roda em api 16 a 20. 
 ### Mega Sena
+  Aplicativo que gera os 6 número aleatoriamente da mega sena. API 16 a 20.
 ### Cara ou Coroa
+  Jogo da cara ou coroa.
 
 
 ### CLONES
-
-Projeto de clones de aplicativos populares.
-
+- [Whats](#whats)
+- [Instagram](#instagram)
 ### Whats
-### Insta
+### Instagram
 
