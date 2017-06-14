@@ -5,8 +5,8 @@ Projeto desenvolvidos com foco em e-commerce - Lojas virtuais e Jogos simples.
 ### E-COMMERCE
 Projetos de lojas virtuais
 
-[Biju-Rose ](#biju-rose)
-[Games ](#games)
+### [Biju-Rose ](#biju-rose)
+### [Games ](#games)
 [Adega](#adega)
 
 ### Biju-Rose
