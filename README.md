@@ -13,7 +13,7 @@ Projetos de lojas virtuais
 ### Games
 ### Adega
 
-### APP DIVERSIFICADOS
+-### APP DIVERSIFICADOS
 
 - [Frase do dia](#frase-do-dia)
 - [Mega Sena](#mega-sena)
