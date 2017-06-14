@@ -3,18 +3,27 @@
 Projeto desenvolvidos com foco em e-commerce - Lojas virtuais e Jogos simples.
 
 ### E-COMMERCE
-
 Projetos de lojas virtuais
+
+- [Biju-Rose ](#biju-rose)
+- [Games ](#games)
+- [Adega](#adega)
 
 ### Biju-Rose
 ### Games
 ### Adega
 
-### JOGOS
+### APP DIVERSIFICADOS
 
-Projetos voltados para jogos 2D, simples.
+- [Frase do dia](#frase-do-dia)
+- [Mega Sena](#mega-sena)
+- [Cara ou Coroa](#cara-ou-coroa)
 
+
+### Frase do dia
+### Mega Sena
 ### Cara ou Coroa
+
 
 ### CLONES
 
