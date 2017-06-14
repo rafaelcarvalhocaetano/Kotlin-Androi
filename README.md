@@ -5,7 +5,7 @@ Projeto desenvolvidos com foco em e-commerce - Lojas virtuais e Jogos simples.
 ### E-COMMERCE
 Projetos de lojas virtuais
 
-[![Join the projeto at https://gitter.im/unity-preview/Lobby](https://badges.gitter.im/unity-preview/Lobby.svg)](https://github.com/rafaelcarvalhocaetano/Studio-APP/tree/master/FrasesFeitas)
+[![Frase](https://badges.gitter.im/unity-preview/Lobby.svg)](https://github.com/rafaelcarvalhocaetano/Studio-APP/tree/master/FrasesFeitas)
 
 - [Biju-Rose ](#biju-rose)
 - [Games ](#games)
