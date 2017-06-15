@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Idade do cachorro</string>
+    <string name="descobrir_idade">Descobrir Idade</string>
 </resources>
