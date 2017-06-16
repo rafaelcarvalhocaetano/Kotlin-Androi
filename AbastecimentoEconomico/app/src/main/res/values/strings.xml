@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Abastecimento Economico</string>
+    <string name="btn_verificar">VERIFICAR</string>
 </resources>

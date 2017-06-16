@@ -21,30 +21,6 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-    <TextView
-        android:text="Preço do Álcool"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="57dp"
-        android:id="@+id/textView2"
-        android:textColor="?android:attr/textColorPrimaryInverse" />
-
-    <TextView
-        android:text="Preço da Gasolina"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="11dp"
-        android:layout_marginEnd="11dp"
-        android:id="@+id/textView3"
-        android:layout_alignBaseline="@+id/textView2"
-        android:layout_alignBottom="@+id/textView2"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:textColor="?android:attr/textColorPrimaryInverseNoDisable" />
-
     <EditText
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
@@ -53,19 +29,63 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="12dp"
-        android:id="@+id/editText"
+        android:id="@+id/alcool"
         android:layout_width="150dp"
-        android:background="@android:color/background_light" />
+        android:background="@android:color/background_light"
+        android:paddingHorizontal="10dp" />
 
     <EditText
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
         android:ems="10"
-        android:id="@+id/editText2"
-        android:layout_alignBaseline="@+id/editText"
-        android:layout_alignBottom="@+id/editText"
+        android:id="@+id/gasolina"
+        android:layout_alignBaseline="@+id/alcool"
+        android:layout_alignBottom="@+id/alcool"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:background="@android:color/background_light" />
+        android:background="@android:color/background_light"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="10dp" />
+
+    <Button
+        android:text="@string/btn_verificar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/resultado"
+        android:layout_below="@+id/alcool"
+        android:layout_marginTop="60dp"
+        android:textColor="?android:attr/textColorPrimaryInverse"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Preço do Álcool"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="63dp"
+        android:id="@+id/textView2"
+        android:textColor="?android:attr/textColorPrimaryInverse"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignLeft="@+id/imageView2"
+        android:layout_alignStart="@+id/imageView2" />
+
+    <TextView
+        android:text="Preço da Gasolina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:textColor="?android:attr/textColorPrimaryInverseNoDisable"
+        android:layout_above="@+id/alcool"
+        android:layout_alignRight="@+id/imageView2"
+        android:layout_alignEnd="@+id/imageView2" />
+
 </RelativeLayout>
