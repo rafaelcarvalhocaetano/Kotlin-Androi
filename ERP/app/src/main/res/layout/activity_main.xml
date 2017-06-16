@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView2"
         android:textSize="@android:dimen/app_icon_size"
+        android:layout_marginTop="115dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="157dp" />
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
