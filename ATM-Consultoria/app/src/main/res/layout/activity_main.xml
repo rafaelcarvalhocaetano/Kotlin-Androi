@@ -37,4 +37,14 @@
         android:layout_alignTop="@+id/imageView2"
         android:layout_alignRight="@+id/imageView"
         android:layout_alignEnd="@+id/imageView" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/menu_cliente"
+        android:layout_marginTop="35dp"
+        android:id="@+id/imageView4"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignLeft="@+id/imageView2"
+        android:layout_alignStart="@+id/imageView2" />
 </RelativeLayout>
