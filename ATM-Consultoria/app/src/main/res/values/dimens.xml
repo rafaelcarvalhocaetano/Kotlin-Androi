@@ -3,4 +3,5 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="empresa_detalhe">20dp</dimen>
+    <dimen name="paddin_padrao">10dp</dimen>
 </resources>

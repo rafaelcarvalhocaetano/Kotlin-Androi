@@ -24,12 +24,9 @@
         android:text="@string/empresa_detalhe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
         android:layout_marginBottom="22dp"
         android:id="@+id/textView"
         android:layout_alignBottom="@+id/imageView2"
-        android:layout_toRightOf="@+id/imageView2"
         android:layout_toEndOf="@+id/imageView2"
         android:textSize="@dimen/empresa_detalhe"
         android:textColor="?android:attr/textColorPrimary" />
@@ -47,7 +44,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView4"
-            android:background="@color/colorAccent" />
+            android:background="@color/colorAccent"
+            android:padding="@dimen/paddin_padrao" />
     </ScrollView>
 
 </RelativeLayout>

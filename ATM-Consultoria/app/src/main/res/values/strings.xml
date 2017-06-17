@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">ATM-Consultoria</string>
     <string name="empresa_detalhe">Sobre a Empresa</string>
+    <string name="servico_detalhe">SERVIÇO DETALHE</string>
 </resources>
