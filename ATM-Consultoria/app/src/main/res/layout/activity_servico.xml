@@ -35,4 +35,40 @@
         android:id="@+id/textView2"
         android:textColor="?android:attr/textColorPrimary"
         android:textSize="@dimen/empresa_detalhe" />
+
+    <TextView
+        android:text="@string/texto_consultoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="66dp"
+        android:id="@+id/textoConsultoria"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="@dimen/empresa_detalhe" />
+
+    <TextView
+        android:text="@string/texto_con_projeto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView6"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="@dimen/empresa_detalhe"
+        android:layout_below="@+id/textoConsultoria"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="43dp" />
+
+    <TextView
+        android:text="Desenvolvimento DeskTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="@dimen/empresa_detalhe"
+        android:layout_marginTop="55dp"
+        android:layout_below="@+id/textView6"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>

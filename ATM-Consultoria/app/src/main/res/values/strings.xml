@@ -2,4 +2,6 @@
     <string name="app_name">ATM-Consultoria</string>
     <string name="empresa_detalhe">Sobre a Empresa</string>
     <string name="servico_detalhe">SERVIÇO DETALHE</string>
+    <string name="texto_consultoria">Consultoria</string>
+    <string name="texto_con_projeto">Desenvolvimento WEB</string>
 </resources>
