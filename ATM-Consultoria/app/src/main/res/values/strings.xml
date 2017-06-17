@@ -4,4 +4,7 @@
     <string name="servico_detalhe">SERVIÇO DETALHE</string>
     <string name="texto_consultoria">Consultoria</string>
     <string name="texto_con_projeto">Desenvolvimento WEB</string>
+    <string name="texto_nossoClientes">NOSSOS CLIENTES</string>
+    <string name="sys_cliente">Empresa de desenvolvimento de Sistemas</string>
+    <string name="rsm_texto">Empresa de Auditoria</string>
 </resources>
