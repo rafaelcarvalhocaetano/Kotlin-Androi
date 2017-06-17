@@ -7,4 +7,9 @@
     <string name="texto_nossoClientes">NOSSOS CLIENTES</string>
     <string name="sys_cliente">Empresa de desenvolvimento de Sistemas</string>
     <string name="rsm_texto">Empresa de Auditoria</string>
+    <string name="texto_contato">CONTATO</string>
+    <string name="texto_email">E-mail: rapha.pse@outlook.com</string>
+    <string name="texto_tel">TELEFONE: ( 11 ) 1111-2222</string>
+    <string name="texto_cel">CELULAR: ( 11 ) 96689-6414</string>
+    <string name="texto_git">PROJETOS: github.com/rafaelcarvalhocaetano</string>
 </resources>
