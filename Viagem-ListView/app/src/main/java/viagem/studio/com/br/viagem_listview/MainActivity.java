@@ -13,8 +13,10 @@ public class MainActivity extends AppCompatActivity {
     private ListView lista;
     private String [] itens = {
             "SÃO PAULO - SP", "RIO DE JANEIRO - RJ",
-            "BAHIA - BA", "PIAUI - PI", "CARAPICUÍBA - CPB"
-            "OSASCO - OSS" };
+            "BAHIA - BA", "PIAUI - PI", "CARAPICUÍBA - CPB",
+            "OSASCO - OSS", "NOVO HORIZONTE - NH", "REGIÃO DAS PATAS - RP",
+            "PATURIS - PT", "CARACAS - CR", "BOLSONARO - 2018", "PRESIDENTE DA REPÚBLICA - BOLSONARO"
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
