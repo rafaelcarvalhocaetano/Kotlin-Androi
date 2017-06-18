@@ -11,15 +11,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="carros3.studio.com.br.carros3.JogoActivity">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/c2"
-        android:id="@+id/imageView3"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="112dp" />
-
     <Button
         android:text="Voltar"
         android:layout_width="match_parent"
@@ -29,4 +20,13 @@
         android:id="@+id/btnVoltar"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:srcCompat="?attr/actionBarItemBackground"
+        android:layout_marginTop="43dp"
+        android:id="@+id/img"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
