@@ -30,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
 
                 //opcao[numAleatorio]
                 Intent intent = new Intent(MainActivity.this, JogoActivity.class);
+                intent.putExtra("opcao", opcao[numAleatorio]);
+
+                startActivity(intent);
 
 
             }
