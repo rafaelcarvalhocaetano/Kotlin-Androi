@@ -23,7 +23,8 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/editText" />
+        android:id="@+id/editText"
+        android:singleLine="true" />
 
     <TextView
         android:text="SENHA"
