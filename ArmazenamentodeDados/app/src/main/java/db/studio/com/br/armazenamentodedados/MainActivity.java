@@ -36,10 +36,19 @@ public class MainActivity extends AppCompatActivity {
                 if(nome.getText().toString().equals("")){
                     Toast.makeText(MainActivity.this, "Por Favor Preencher o Nome !", Toast.LENGTH_SHORT).show();
                 }else{
-                    editor.putString("Nome: "+nome.getText().toString());
+                    editor.putString("nome", nome.getText().toString() );
                     editor.commit();
+                    exibir.setText("Nome: "+nome.getText().toString());
                 }
             }
         });
+        //REC
+        SharedPreferences sps = getSharedPreferences(ARQUIVO,0);
+        if(sps.contains("nome")){
+            String nomeUsuário = sps.getString("nome", "Usuário não definido ... ");
+            exibir.setText("Nome: " +nomeUsuário);
+        }else{
+            exibir.setText("Usuário não definido ... ");
+        }
     }
 }
