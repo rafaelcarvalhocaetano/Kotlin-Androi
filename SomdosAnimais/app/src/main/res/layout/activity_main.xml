@@ -25,53 +25,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/gato"
-        android:id="@+id/imageView3"
-        android:layout_alignTop="@+id/imageView2"
+        android:id="@+id/gato"
+        android:layout_alignTop="@+id/cao"
         android:layout_alignRight="@+id/imageView"
         android:layout_alignEnd="@+id/imageView" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/leao"
-        android:layout_marginTop="39dp"
-        android:id="@+id/imageView4"
-        android:layout_below="@+id/imageView2"
-        android:layout_alignLeft="@+id/imageView2"
-        android:layout_alignStart="@+id/imageView2" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/macaco"
-        android:id="@+id/imageView5"
-        android:layout_alignBottom="@+id/imageView4"
-        android:layout_alignRight="@+id/imageView3"
-        android:layout_alignEnd="@+id/imageView3" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ovelha"
-        android:id="@+id/imageView6"
-        android:layout_below="@+id/imageView4"
-        android:layout_alignLeft="@+id/imageView4"
-        android:layout_alignStart="@+id/imageView4" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/vaca"
-        android:id="@+id/imageView7"
-        android:layout_alignBottom="@+id/imageView6"
-        android:layout_alignRight="@+id/imageView5"
-        android:layout_alignEnd="@+id/imageView5" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         app:srcCompat="@drawable/cao"
-        android:id="@+id/imageView2"
+        android:id="@+id/cao"
         android:layout_below="@+id/imageView"
         android:layout_alignLeft="@+id/imageView"
         android:layout_alignStart="@+id/imageView" />
@@ -83,4 +46,42 @@
         android:id="@+id/imageView8"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/leao"
+        android:layout_marginTop="26dp"
+        android:id="@+id/leao"
+        android:layout_below="@+id/cao"
+        android:layout_alignLeft="@+id/cao"
+        android:layout_alignStart="@+id/cao" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/macaco"
+        android:id="@+id/mac"
+        android:layout_above="@+id/ovelha"
+        android:layout_alignRight="@+id/gato"
+        android:layout_alignEnd="@+id/gato" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ovelha"
+        android:id="@+id/ovelha"
+        android:layout_below="@+id/leao"
+        android:layout_alignLeft="@+id/leao"
+        android:layout_alignStart="@+id/leao"
+        android:layout_marginTop="22dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/vaca"
+        android:id="@+id/vaca"
+        android:layout_alignBottom="@+id/ovelha"
+        android:layout_alignRight="@+id/mac"
+        android:layout_alignEnd="@+id/mac" />
 </RelativeLayout>
