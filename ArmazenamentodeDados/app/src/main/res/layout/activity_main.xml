@@ -11,7 +11,46 @@
     tools:context="db.studio.com.br.armazenamentodedados.MainActivity">
 
     <TextView
+        android:text="Qual seu nome?"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_marginTop="29dp"
+        android:id="@+id/textView"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/texto"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:id="@+id/texto"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentLeft="false"
+        android:justificationMode="inter_word" />
+
+    <Button
+        android:text="salvar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:id="@+id/btn"
+        android:layout_below="@+id/texto"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Oi, usuário não definido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="71dp"
+        android:id="@+id/exibir"
+        android:textColor="@color/colorPrimaryDark" />
 </RelativeLayout>
