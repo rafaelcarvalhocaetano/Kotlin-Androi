@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">QComida - RadioButton</string>
+    <string name="comida">Qual sua comida preferida</string>
+</resources>
