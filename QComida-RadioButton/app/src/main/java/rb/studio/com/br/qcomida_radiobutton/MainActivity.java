@@ -20,14 +20,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        rb = (RadioGroup) findViewById(R.id.rg);
+        rg = (RadioGroup) findViewById(R.id.rg);
         btn = (Button) findViewById(R.id.btn);
         texto = (TextView) findViewById(R.id.exibirTexto);
 
        btn.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
-               
+               int rb = rg.getCheckedRadioButtonId();
+              if(rb > 0){
+                  escolhido = (RadioButton) findViewById(rb);
+                  texto.setText(escolhido.getText());
+              }
            }
        });
     }

@@ -56,7 +56,9 @@
         android:id="@+id/btn" />
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="198dp"
         android:layout_height="wrap_content"
-        android:id="@+id/exibirTexto" />
+        android:id="@+id/exibirTexto"
+        android:textSize="@dimen/texto"
+        android:textColor="@android:color/background_dark" />
 </LinearLayout>
