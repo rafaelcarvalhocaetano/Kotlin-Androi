@@ -24,5 +24,38 @@
 
     <RadioGroup
         android:layout_width="200dp"
-        android:layout_height="150dp" />
+        android:layout_height="150dp" >
+
+        <RadioButton
+            android:text="Macarrão"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/macarrao"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="Fish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fish"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="Rice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rice"
+            android:layout_weight="1" />
+    </RadioGroup>
+
+    <Button
+        android:text="escolher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/exibirTexto" />
 </LinearLayout>
