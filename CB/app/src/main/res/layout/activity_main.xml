@@ -27,15 +27,15 @@
         android:layout_alignLeft="@+id/textView"
         android:layout_alignStart="@+id/textView"
         android:layout_marginTop="31dp"
-        android:id="@+id/checkBox" />
+        android:id="@+id/cao" />
 
     <CheckBox
         android:text="Onça"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/checkBox3"
-        android:layout_alignBaseline="@+id/checkBox2"
-        android:layout_alignBottom="@+id/checkBox2"
+        android:id="@+id/onca"
+        android:layout_alignBaseline="@+id/gato"
+        android:layout_alignBottom="@+id/gato"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
@@ -43,16 +43,16 @@
         android:text="Gato"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/checkBox2"
-        android:layout_alignBaseline="@+id/checkBox"
-        android:layout_alignBottom="@+id/checkBox"
+        android:id="@+id/gato"
+        android:layout_alignBaseline="@+id/cao"
+        android:layout_alignBottom="@+id/cao"
         android:layout_centerHorizontal="true" />
 
     <Button
         android:text="Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/checkBox2"
+        android:layout_below="@+id/gato"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="82dp"
         android:id="@+id/btn" />
@@ -62,8 +62,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btn"
-        android:layout_alignRight="@+id/checkBox2"
-        android:layout_alignEnd="@+id/checkBox2"
+        android:layout_alignRight="@+id/gato"
+        android:layout_alignEnd="@+id/gato"
         android:layout_marginTop="53dp"
         android:id="@+id/exibirTexto" />
 </RelativeLayout>
