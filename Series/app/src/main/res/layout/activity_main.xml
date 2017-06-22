@@ -26,7 +26,8 @@
         android:layout_below="@+id/imageView"
         android:layout_alignLeft="@+id/imageView"
         android:layout_alignStart="@+id/imageView"
-        android:layout_marginTop="93dp" />
+        android:layout_marginTop="93dp"
+        android:max="4" />
 
     <TextView
         android:text="Pouco"
@@ -54,7 +55,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/pouco"
+        app:srcCompat="?attr/actionBarDivider"
         android:id="@+id/img"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />

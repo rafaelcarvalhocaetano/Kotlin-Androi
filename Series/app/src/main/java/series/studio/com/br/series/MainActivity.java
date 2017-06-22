@@ -22,7 +22,17 @@ public class MainActivity extends AppCompatActivity {
         sb.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-                
+                int valor = i;
+                if(valor == 1){
+                    img.setImageResource(R.drawable.pouco);
+                }else if(valor == 2){
+                    img.setImageResource(R.drawable.medio);
+                }else if(valor == 3){
+                    img.setImageResource(R.drawable.muito);
+                }else if(valor == 4){
+                    img.setImageResource(R.drawable.susto);
+
+                }
             }
 
             @Override
