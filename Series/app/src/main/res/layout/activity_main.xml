@@ -22,7 +22,7 @@
     <SeekBar
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:id="@+id/seekBar"
+        android:id="@+id/sb"
         android:layout_below="@+id/imageView"
         android:layout_alignLeft="@+id/imageView"
         android:layout_alignStart="@+id/imageView"
@@ -44,8 +44,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textView"
-        android:layout_alignRight="@+id/seekBar"
-        android:layout_alignEnd="@+id/seekBar"
+        android:layout_alignRight="@+id/sb"
+        android:layout_alignEnd="@+id/sb"
         android:layout_marginRight="12dp"
         android:layout_marginEnd="12dp"
         android:id="@+id/textView2"
@@ -55,7 +55,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/pouco"
-        android:id="@+id/imageView2"
+        android:id="@+id/img"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>
