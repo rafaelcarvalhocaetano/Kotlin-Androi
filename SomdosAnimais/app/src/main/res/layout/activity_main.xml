@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/gato"
         android:id="@+id/gato"
-        android:layout_alignTop="@+id/cao"
+        android:layout_alignTop="@+id/caoid"
         android:layout_alignRight="@+id/imageView"
         android:layout_alignEnd="@+id/imageView" />
 
@@ -34,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/cao"
-        android:id="@+id/cao"
+        android:id="@+id/caoid"
         android:layout_below="@+id/imageView"
         android:layout_alignLeft="@+id/imageView"
         android:layout_alignStart="@+id/imageView" />
@@ -42,20 +42,12 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/direitos"
-        android:id="@+id/imageView8"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         app:srcCompat="@drawable/leao"
         android:layout_marginTop="26dp"
         android:id="@+id/leao"
-        android:layout_below="@+id/cao"
-        android:layout_alignLeft="@+id/cao"
-        android:layout_alignStart="@+id/cao" />
+        android:layout_below="@+id/caoid"
+        android:layout_alignLeft="@+id/caoid"
+        android:layout_alignStart="@+id/caoid" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -84,4 +76,22 @@
         android:layout_alignBottom="@+id/ovelha"
         android:layout_alignRight="@+id/mac"
         android:layout_alignEnd="@+id/mac" />
+
+    <TextView
+        android:text="Rafael Carvalho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView8"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/textView" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/direitos"
+        android:id="@+id/imageView8"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>

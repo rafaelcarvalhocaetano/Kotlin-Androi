@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        cao = (ImageView) findViewById(R.id.cao);
+        cao = (ImageView) findViewById(R.id.caoid);
         gato = (ImageView) findViewById(R.id.gato);
         ovelha = (ImageView) findViewById(R.id.ovelha);
         vaca = (ImageView) findViewById(R.id.vaca);
@@ -42,36 +42,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v){
 
         switch (v.getId()){
-            case R.id.cao;
+            case R.id.caoid:
                 mp = MediaPlayer.create(MainActivity.this, R.raw.cao);
                 tocar();
                 break;
-            case R.id.gato;
+            case R.id.gato:
                 mp = MediaPlayer.create(MainActivity.this, R.raw.gato);
                 tocar();
                 break;
-                break;
-            case R.id.leao;
+            case R.id.leao:
                 mp = MediaPlayer.create(MainActivity.this, R.raw.leao);
                 tocar();
                 break;
-                break;
-            case R.id.mac;
+            case R.id.mac:
                 mp = MediaPlayer.create(MainActivity.this, R.raw.macaco);
                 tocar();
                 break;
-                break;
-            case R.id.ovelha;
+            case R.id.ovelha:
                 mp = MediaPlayer.create(MainActivity.this, R.raw.ovelha);
                 tocar();
                 break;
-                break;
-            case R.id.vaca;
+            case R.id.vaca:
                 mp = MediaPlayer.create(MainActivity.this, R.raw.vaca);
                 tocar();
                 break;
-                break;
-           default:
         }
 
     }
@@ -79,5 +73,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(mp != null){
             mp.start();
         }
+    }
+    @Override
+    protected void onDestroy(){
+        if(mp != null){
+            mp.release();
+            mp = null;
+        }
+        super.onDestroy();
     }
 }
