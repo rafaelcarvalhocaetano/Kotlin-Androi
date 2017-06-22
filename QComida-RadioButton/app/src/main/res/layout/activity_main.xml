@@ -24,7 +24,8 @@
 
     <RadioGroup
         android:layout_width="200dp"
-        android:layout_height="150dp" >
+        android:layout_height="150dp"
+        android:id="@+id/rg">
 
         <RadioButton
             android:text="Macarrão"
