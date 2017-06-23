@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Cor do Usuario</string>
+    <string name="texto_titulo">Escolha uma cor de fundo.</string>
 </resources>

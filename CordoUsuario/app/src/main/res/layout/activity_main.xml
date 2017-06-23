@@ -10,4 +10,13 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="cdu.studio.com.br.cordousuario.MainActivity">
 
+    <TextView
+        android:text="@string/texto_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView"
+        android:textSize="20sp"
+        android:textColor="@android:color/black" />
 </RelativeLayout>
