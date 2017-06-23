@@ -19,4 +19,44 @@
         android:id="@+id/textView"
         android:textSize="20sp"
         android:textColor="@android:color/black" />
+
+    <RadioGroup
+        android:layout_marginTop="14dp"
+        android:layout_height="200dp"
+        android:layout_width="200dp"
+        android:id="@+id/rg"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/background_light">
+
+        <RadioButton
+            android:text="@string/azul"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:id="@+id/rbAzul" />
+
+        <RadioButton
+            android:text="Amarelo"
+            android:layout_width="wrap_content"
+            android:id="@+id/rbAmarelo"
+            android:layout_weight="1"
+            android:layout_height="50dp" />
+
+        <RadioButton
+            android:text="Laranja"
+            android:layout_width="wrap_content"
+            android:id="@+id/rbLaranja"
+            android:layout_weight="1"
+            android:layout_height="40dp" />
+    </RadioGroup>
+
+    <Button
+        android:text="@string/btnSalvar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rg"
+        android:layout_marginTop="94dp"
+        android:id="@+id/button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>
