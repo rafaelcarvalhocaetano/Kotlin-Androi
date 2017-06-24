@@ -13,11 +13,12 @@ Projetos de lojas virtuais
 ### Games
 ### Adega
 
-### APP DIVERSIFICADOS
+### App Diversificados
 
 - [Frase do dia](#frase-do-dia)
 - [Mega Sena](#mega-sena)
 - [Cara ou Coroa](#cara-ou-coroa)
+- [Som dos Animais-Infantil](#som-dos-animais---infantil)
 
 
 ### Frase do dia
@@ -26,6 +27,8 @@ Projetos de lojas virtuais
   Aplicativo que gera os 6 número aleatoriamente da mega sena. API 16 a 20.
 ### Cara ou Coroa
   Jogo da cara ou coroa.
+### Som dos Animais-Infantil
+  Aplicativos infantil sobre sons de animais. Quando você aberta o animal desejado ele emite um som.
 
 
 ### CLONES
