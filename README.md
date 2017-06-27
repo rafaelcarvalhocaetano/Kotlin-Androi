@@ -1,6 +1,6 @@
 ### Projetos Android.
 
-Projeto desenvolvidos com foco em e-commerce - Lojas virtuais e Jogos simples.
+Projeto desenvolvidos didaticamente com foco em e-commerce - Lojas virtuais e Jogos e aplicativos com finalidades únicas e simples.
 
 ### E-COMMERCE
 Projetos de lojas virtuais
