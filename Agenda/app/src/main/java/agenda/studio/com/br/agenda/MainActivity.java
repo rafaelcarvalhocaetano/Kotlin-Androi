@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private SQLiteDatabase db;
     private ArrayAdapter<String> itens;
     private ArrayList<String> itensTarefas;
+    private ArrayList<Integer> recuperarTarefas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +54,18 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
+
+          lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+              @Override
+              public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                  removerTarefa(ids.get(i));
+
+              }
+          });
+
             //Recuperar método ListarTarefa
             recuperarTarefas();
 
@@ -89,6 +103,7 @@ public class MainActivity extends AppCompatActivity {
 
             //Criar adaptador
             itensTarefas = new ArrayList<String>();
+            ids = new ArrayList<Integer>()
             itens = new ArrayAdapter<String>(   getApplicationContext(),
                                                 android.R.layout.simple_list_item_2,
                                                 android.R.id.text1,
@@ -98,13 +113,21 @@ public class MainActivity extends AppCompatActivity {
 
             //Lista as tarefas
             cursor.moveToFirst();
-
             while(cursor != null){
                 Log.i("RESULTADO - ", "Tarefa: "+cursor.getString(indiceColunaTarefa));
                 itensTarefas.add(cursor.getString(indiceColunaTarefa));
+                ids.add(Integer.parseInt(cursor.getString(indiceColunaId)));
+
                 cursor.moveToNext();
             }
 
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+    private void removerTarefa(){
+        try {
+            db.execSQL("DELETE FROM tarefas WHERE id="+id);
         }catch (Exception e){
             e.printStackTrace();
         }
