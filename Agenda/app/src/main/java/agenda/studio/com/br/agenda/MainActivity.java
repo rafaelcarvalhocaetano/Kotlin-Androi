@@ -125,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-    private void removerTarefa(){
+    private void removerTarefa(Integer id){
         try {
             db.execSQL("DELETE FROM tarefas WHERE id="+id);
         }catch (Exception e){
