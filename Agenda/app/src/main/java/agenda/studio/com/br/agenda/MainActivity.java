@@ -35,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
         //recuperar componentes
         texto = (EditText) findViewById(R.id.texto);
         btn = (Button) findViewById(R.id.btn);
+            //lista
+            lista = (ListView) findViewById(R.id.lista);
 
 
         //Banco de dados
@@ -55,13 +57,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
           lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
               @Override
               public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-                  removerTarefa(id.get(i));
+                  removerTarefa(ids.get(i));
 
               }
           });
@@ -98,9 +98,6 @@ public class MainActivity extends AppCompatActivity {
             int indiceColunaId = cursor.getColumnIndex("id");
             int indiceColunaTarefa = cursor.getColumnIndex("tarefa");
 
-            //lista
-            lista = (ListView) findViewById(R.id.lista);
-
             //Criar adaptador
             itensTarefas = new ArrayList<String>();
             ids = new ArrayList<Integer>();
@@ -127,7 +124,10 @@ public class MainActivity extends AppCompatActivity {
     }
     private void removerTarefa(Integer id){
         try {
+            
             db.execSQL("DELETE FROM tarefas WHERE id="+id);
+            recuperarTarefas();
+
         }catch (Exception e){
             e.printStackTrace();
         }
