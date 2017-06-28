@@ -8,17 +8,28 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 public class FlappyBird extends ApplicationAdapter {
 
-	private int contador = 0;
+	private Texture passaro;
+	private SpriteBatch sb;
+	private int movimento = 0;
+	private Texture fundo;
 
 	@Override
 	public void create () {
-		Gdx.app.log("Create", "Inicializado o jogo");
+		sb = new SpriteBatch();
+		passaro = new Texture("passaro1.png");
+		fundo = new Texture("fundo.png");
+
 	}
 
 	@Override
 	public void render () {
-		cotador ++;
-		Gdx.app.log("Render", "Renderizando o jogo"+contador);
+
+		movimento ++;
+		sb.begin();
+		sb.draw(fundo, 0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+		sb.draw(passaro, movimento, 400);
+
+		sb.end();
 	}
 	
 
