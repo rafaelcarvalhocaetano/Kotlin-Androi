@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,8 +41,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String textoDigitado = texto.getText().toString();
+                salvarTarefas(textoDigitado);
 
-                db.execSQL("INSERT INTO tarefas (tarefa) VALUES(' "+ textoDigitado +" ') ");
+
+
             }
         });
 
@@ -63,5 +66,19 @@ public class MainActivity extends AppCompatActivity {
         }catch (Exception e){
             e.printStackTrace();
         }
+    }
+    private void salvarTarefas(String texto){
+        try {
+            if(texto.equals("")){
+                Toast.makeText(MainActivity.this, "Digite uma tarefa", Toast.LENGTH_SHORT).show();
+            }else{
+                db.execSQL("INSERT INTO tarefas (tarefa) VALUES(' "+ texto +" ') ");
+                Toast.makeText(MainActivity.this, "Tarefa salva com sucesso", Toast.LENGTH_SHORT).show();
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+
     }
 }
