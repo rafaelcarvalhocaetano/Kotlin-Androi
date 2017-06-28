@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private SQLiteDatabase db;
     private ArrayAdapter<String> itens;
     private ArrayList<String> itensTarefas;
-    private ArrayList<Integer> recuperarTarefas;
+    private ArrayList<Integer> ids;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
               @Override
               public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-                  removerTarefa(ids.get(i));
+                  removerTarefa(id.get(i));
 
               }
           });
@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
 
             //Criar adaptador
             itensTarefas = new ArrayList<String>();
-            ids = new ArrayList<Integer>()
+            ids = new ArrayList<Integer>();
             itens = new ArrayAdapter<String>(   getApplicationContext(),
                                                 android.R.layout.simple_list_item_2,
                                                 android.R.id.text1,
