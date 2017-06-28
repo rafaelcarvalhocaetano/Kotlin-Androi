@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
     }
     private void removerTarefa(Integer id){
         try {
-            
+
             db.execSQL("DELETE FROM tarefas WHERE id="+id);
             recuperarTarefas();
 
