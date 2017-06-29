@@ -23,6 +23,7 @@ public class FlappyBird extends ApplicationAdapter {
 	private float posicaoInicialVerticar;
 	private float movimentoCanoHorizontal = larguraDispositivo;
 	private float espacoCanos;
+	private float deltaTime;
 
 
 	@Override
@@ -35,27 +36,34 @@ public class FlappyBird extends ApplicationAdapter {
 		passaros[1] = new Texture("passaro2.png");
 		passaros[2] = new Texture("passaro3.png");
 
-		//Exibindo os canos
-		canoBaixo = new Texture("cano_baixo_maior.png");
-		canoAlto = new Texture("cano_topo_maior.png");
+		//Exibindo imagens dos canos
+		canoBaixo = new Texture("cano_baixo.png");
+		canoAlto = new Texture("cano_topo.png");
+		//Imagem de fundo
 		fundo = new Texture("fundo.png");
-		//espaço entre os canos
-		espacoCanos = 300;
-
+		//pegando altura e largura da tela do dispositivo
 		larguraDispositivo = Gdx.graphics.getWidth();
-		alturaDispositivo = Gdx.graphics.getHeight();
+		alturaDispositivo = Gdx.grphics.getHeight();
+
 		posicaoInicialVerticar = alturaDispositivo / 2;
 		movimentoCanoHorizontal = larguraDispositivo - 100;
+
+		//espaço entre os canos
+		espacoCanos = 300;
 
 	}
 
 	@Override
 	public void render () {
 
+		deltaTime = Gdx.graphics.getDeltaTime();
+		//variação das asas do bird
+		variacao += deltaTime * 10;
+
+		movimentoCanoHorizontal -= deltaTime * 200;
 		velocidadeQueda ++;
 
-		//variação das asas do bird
-		variacao += Gdx.graphics.getDeltaTime() * 10;
+
 		if(variacao > 2){
 			variacao = 0;
 		}
@@ -66,6 +74,10 @@ public class FlappyBird extends ApplicationAdapter {
 		//Fazendo ele descer caso não seja tocado na tela
 		if(posicaoInicialVerticar > 0 || velocidadeQueda < 0){
 			posicaoInicialVerticar = posicaoInicialVerticar - velocidadeQueda;
+		}
+		//fazendo o cano percorer a tela de modo real
+		if(movimentoCanoHorizontal < -canoAlto.getWidth()){
+			movimentoCanoHorizontal = larguraDispositivo;
 		}
 
 
