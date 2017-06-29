@@ -50,7 +50,11 @@ public class FlappyBird extends ApplicationAdapter {
 			variacao = 0;
 		}
 
-		if(posicaoInicialVerticar > 0){
+		if(Gdx.input.justTouched()){
+			velocidadeQueda = -20;
+		}
+
+		if(posicaoInicialVerticar > 0 || velocidadeQueda < 0){
 			posicaoInicialVerticar = posicaoInicialVerticar - velocidadeQueda;
 		}
 
