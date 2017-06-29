@@ -17,6 +17,8 @@ public class FlappyBird extends ApplicationAdapter {
 	private int larguraDispositivo;
 	private int alturaDispositivo;
 	private float variacao = 0;
+	private float velocidadeQueda = 0;
+	private float posicaoInicialVerticar;
 
 
 	@Override
@@ -33,11 +35,14 @@ public class FlappyBird extends ApplicationAdapter {
 
 		larguraDispositivo = Gdx.graphics.getWidth();
 		alturaDispositivo = Gdx.graphics.getHeight();
+		posicaoInicialVerticar = alturaDispositivo / 2;
 
 	}
 
 	@Override
 	public void render () {
+
+		velocidadeQueda ++;
 
 		//variação das asas do bird
 		variacao += Gdx.graphics.getDeltaTime() * 10;
@@ -45,9 +50,15 @@ public class FlappyBird extends ApplicationAdapter {
 			variacao = 0;
 		}
 
+		if(posicaoInicialVerticar > 0){
+			posicaoInicialVerticar = posicaoInicialVerticar - velocidadeQueda;
+		}
+
+
+
 		sb.begin();
 		sb.draw(fundo, 0, 0, larguraDispositivo, alturaDispositivo);
-		sb.draw(passaros[(int) variacao], 30, alturaDispositivo / 2);
+		sb.draw(passaros[(int) variacao], 30, posicaoInicialVerticar);
 
 		sb.end();
 	}
