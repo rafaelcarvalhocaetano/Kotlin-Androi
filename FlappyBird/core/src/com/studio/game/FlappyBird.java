@@ -8,26 +8,46 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 public class FlappyBird extends ApplicationAdapter {
 
-	private Texture passaro;
+	private Texture[] passaros;
 	private SpriteBatch sb;
-	private int movimento = 0;
 	private Texture fundo;
+
+	//Atributos de configuração
+	private int movimento = 0;
+	private int larguraDispositivo;
+	private int alturaDispositivo;
+	private float variacao = 0;
+
 
 	@Override
 	public void create () {
 		sb = new SpriteBatch();
-		passaro = new Texture("passaro1.png");
+
+		//Fazendo ele voar
+		passaros = new Texture[3];
+		passaros[0] = new Texture("passaro1.png");
+		passaros[1] = new Texture("passaro2.png");
+		passaros[2] = new Texture("passaro3.png");
+
 		fundo = new Texture("fundo.png");
+
+		larguraDispositivo = Gdx.graphics.getWidth();
+		alturaDispositivo = Gdx.graphics.getHeight();
 
 	}
 
 	@Override
 	public void render () {
 
-		movimento ++;
+		//variação das asas do bird
+		variacao += Gdx.graphics.getDeltaTime() * 10;
+		if(variacao > 2){
+			variacao = 0;
+		}
+
 		sb.begin();
-		sb.draw(fundo, 0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
-		sb.draw(passaro, movimento, 400);
+		sb.draw(fundo, 0, 0, larguraDispositivo, alturaDispositivo);
+		sb.draw(passaros[(int) variacao], 30, alturaDispositivo / 2);
 
 		sb.end();
 	}
