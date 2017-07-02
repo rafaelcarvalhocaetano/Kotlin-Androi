@@ -2,8 +2,10 @@ package com.studio.game;
 
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import java.util.Random;
@@ -16,6 +18,7 @@ public class FlappyBird extends ApplicationAdapter {
     private Texture canoBaixo;
     private Texture canoTopo;
     private Random numeroRandomico;
+    private BitmapFont fonte;
 
     //Atributos de configuracao
     private int larguraDispositivo;
@@ -28,12 +31,17 @@ public class FlappyBird extends ApplicationAdapter {
     private float deltaTime;
     private float alturaEntreCanosRandomica;
     private int estadoJogo = 0; //jogo não iniciado ou 1 jogo iniciado
+    private int pontuacao = 0;
 
     @Override
     public void create() {
 
         batch = new SpriteBatch();
         numeroRandomico = new Random();
+        //exibindo pontuação
+        fonte = new BitmapFont();
+        fonte.setColor(Color.WHITE);
+        fonte.getData().setScale(6);
 
         //Fazendo ele voar
         passaros = new Texture[3];
@@ -53,7 +61,7 @@ public class FlappyBird extends ApplicationAdapter {
         posicaoInicialVertical = alturaDispositivo / 2;
         posicaoMovimentoCanoHorizontal = larguraDispositivo;
         //espaço dos canos
-        espacoEntreCanos = 300;
+        espacoEntreCanos = 200;
     }
 
     @Override
@@ -77,7 +85,7 @@ public class FlappyBird extends ApplicationAdapter {
             }
         }else {
 
-            posicaoMovimentoCanoHorizontal -= deltaTime * 200;
+            posicaoMovimentoCanoHorizontal -= deltaTime * 300;
             velocidadeQueda++;
 
             //Fazendo o passaro subir com o toque na tela
