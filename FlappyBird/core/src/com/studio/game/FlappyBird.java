@@ -27,7 +27,7 @@ public class FlappyBird extends ApplicationAdapter {
     private float espacoEntreCanos;
     private float deltaTime;
     private float alturaEntreCanosRandomica;
-    private int estadoJogo = 0;
+    private int estadoJogo = 0; //jogo não iniciado ou 1 jogo iniciado
 
     @Override
     public void create() {
@@ -58,6 +58,15 @@ public class FlappyBird extends ApplicationAdapter {
 
     @Override
     public void render() {
+
+        deltaTime = Gdx.graphics.getDeltaTime();
+        //variação das asas do bird
+        variacao += deltaTime * 10;
+
+        if (variacao > 2) {
+            variacao = 0;
+        }
+
         //Verificando se o jogo foi inicializado
         if(estadoJogo == 0){
             //verificando se a tela foi tocada
@@ -68,16 +77,9 @@ public class FlappyBird extends ApplicationAdapter {
             }
         }else {
 
-            deltaTime = Gdx.graphics.getDeltaTime();
-            //variação das asas do bird
-            variacao += deltaTime * 10;
-
             posicaoMovimentoCanoHorizontal -= deltaTime * 200;
             velocidadeQueda++;
 
-            if (variacao > 2) {
-                variacao = 0;
-            }
             //Fazendo o passaro subir com o toque na tela
             if (Gdx.input.justTouched()) {
                 velocidadeQueda = -15;
