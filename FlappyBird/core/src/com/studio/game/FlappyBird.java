@@ -9,6 +9,7 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.math.Circle;
+import com.badlogic.gdx.math.Intersector;
 import com.badlogic.gdx.math.Rectangle;
 
 import java.util.Random;
@@ -27,7 +28,7 @@ public class FlappyBird extends ApplicationAdapter {
     private Circle circulo;
     private Rectangle retanguloCanoTopo;
     private Rectangle retanguloCanoBaixo;
-    private ShapeRenderer shape;
+    //private ShapeRenderer shape;
 
     //Atributos de configuracao
     private int larguraDispositivo;
@@ -47,9 +48,11 @@ public class FlappyBird extends ApplicationAdapter {
     public void create() {
         //declarando as formas
         circulo = new Circle();
-        //retanguloCanoBaixo = new Rectangle();
-        //retanguloCanoTopo = new Rectangle();
+        /*
+        retanguloCanoBaixo = new Rectangle();
+        retanguloCanoTopo = new Rectangle();
         shape = new ShapeRenderer();
+        */
 
         //pagina inicial
         batch = new SpriteBatch();
@@ -96,12 +99,10 @@ public class FlappyBird extends ApplicationAdapter {
         if(estadoJogo == 0){
             //verificando se a tela foi tocada
             if(Gdx.input.justTouched()){
-
                 estadoJogo = 1;
-
             }
-        }else {
 
+        }else {
             posicaoMovimentoCanoHorizontal -= deltaTime * 300;
             velocidadeQueda++;
 
@@ -128,9 +129,6 @@ public class FlappyBird extends ApplicationAdapter {
                     pontuacao ++;
                     marcouPonto = true;
                 }
-
-
-
             }
         }
 
@@ -163,8 +161,7 @@ public class FlappyBird extends ApplicationAdapter {
                 canoTopo.getWidth(), canoTopo.getHeight()
         );
 
-
-
+/*
         //desenhando as formas
         shape.begin(ShapeRenderer.ShapeType.Filled);
         //Instanciando a posição do circulo
@@ -177,8 +174,10 @@ public class FlappyBird extends ApplicationAdapter {
         shape.setColor(Color.RED);
         shape.end();
 
-
-
-
+*/
+        //teste colisão
+        if(Intersector.overlaps(circulo, retanguloCanoBaixo) || Intersector.overlaps(circulo, retanguloCanoTopo)){
+            Gdx.app.log("Colisao", "Houve colisão");
+        }
     }
 }
