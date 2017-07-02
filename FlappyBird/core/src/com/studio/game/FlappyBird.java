@@ -32,6 +32,7 @@ public class FlappyBird extends ApplicationAdapter {
     private float alturaEntreCanosRandomica;
     private int estadoJogo = 0; //jogo não iniciado ou 1 jogo iniciado
     private int pontuacao = 0;
+    private boolean marcouPonto;
 
     @Override
     public void create() {
@@ -101,6 +102,18 @@ public class FlappyBird extends ApplicationAdapter {
 
                 posicaoMovimentoCanoHorizontal = larguraDispositivo;
                 alturaEntreCanosRandomica = numeroRandomico.nextInt(400) - 200;
+                marcouPonto = false;
+
+            }
+            //verificando pontuação
+            if(posicaoMovimentoCanoHorizontal < 120){
+
+                if(!marcouPonto){
+                    pontuacao ++;
+                    marcouPonto = true;
+                }
+
+
 
             }
         }
@@ -114,6 +127,8 @@ public class FlappyBird extends ApplicationAdapter {
         batch.draw(canoBaixo, posicaoMovimentoCanoHorizontal, alturaDispositivo / 2 - canoBaixo.getHeight() - espacoEntreCanos / 2 + alturaEntreCanosRandomica);
         //Fazendo o passaro se movimentar
         batch.draw(passaros[(int) variacao], 120, posicaoInicialVertical);
+
+        fonte.draw(batch, String.valueOf(pontuacao), larguraDispositivo / 2, alturaDispositivo - 50);
         //finaliza
         batch.end();
 
