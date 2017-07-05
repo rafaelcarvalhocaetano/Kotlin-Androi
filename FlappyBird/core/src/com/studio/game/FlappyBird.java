@@ -23,6 +23,7 @@ public class FlappyBird extends ApplicationAdapter {
     private Texture canoTopo;
     private Random numeroRandomico;
     private BitmapFont fonte;
+    private BitmapFont mensagem;
     private Texture gameOver;
 
     //formas para verificar colisão
@@ -64,6 +65,10 @@ public class FlappyBird extends ApplicationAdapter {
         fonte = new BitmapFont();
         fonte.setColor(Color.WHITE);
         fonte.getData().setScale(6);
+        //mensagem de iniciar jogo após game over
+        mensagem = new BitmapFont();
+        mensagem.setColor(Color.WHITE);
+        mensagem.getData().setScale(3);
 
         //Fazendo ele voar
         passaros = new Texture[3];
@@ -141,6 +146,14 @@ public class FlappyBird extends ApplicationAdapter {
                 }
             }else{ //tela game over
 
+                if(Gdx.input.justTouched()){
+                    estadoJogo = 0;
+                    pontuacao = 0;
+                    velocidadeQueda = 0;
+                    posicaoInicialVertical = alturaDispositivo / 2;
+                    posicaoMovimentoCanoHorizontal = larguraDispositivo;
+                }
+
 
             }
         }
@@ -156,6 +169,12 @@ public class FlappyBird extends ApplicationAdapter {
         batch.draw(passaros[(int) variacao], 120, posicaoInicialVertical);
 
         fonte.draw(batch, String.valueOf(pontuacao), larguraDispositivo / 2, alturaDispositivo - 50);
+
+        //mostrando game over
+        if(estadoJogo == 2){
+            batch.draw(gameOver, larguraDispositivo / 2 - (gameOver.getWidth() / 2), alturaDispositivo / 2);
+            mensagem.draw(batch,"Toque para reiniciar", larguraDispositivo / 2 - (gameOver.getWidth() / 2), alturaDispositivo / 2 - (gameOver.getHeight()));
+        }
         //finaliza
         batch.end();
 
@@ -189,7 +208,7 @@ public class FlappyBird extends ApplicationAdapter {
 
 */
         //teste colisão
-        if(Intersector.overlaps(circulo, retanguloCanoBaixo) || Intersector.overlaps(circulo, retanguloCanoTopo)){
+        if(Intersector.overlaps(circulo, retanguloCanoBaixo) || Intersector.overlaps(circulo, retanguloCanoTopo) || posicaoInicialVertical <= 0 || posicaoInicialVertical >= alturaDispositivo){
            estadoJogo = 2;
 
         }
