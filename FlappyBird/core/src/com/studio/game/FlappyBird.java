@@ -23,6 +23,7 @@ public class FlappyBird extends ApplicationAdapter {
     private Texture canoTopo;
     private Random numeroRandomico;
     private BitmapFont fonte;
+    private Texture gameOver;
 
     //formas para verificar colisão
     private Circle circulo;
@@ -54,6 +55,7 @@ public class FlappyBird extends ApplicationAdapter {
         shape = new ShapeRenderer();
         */
 
+
         //pagina inicial
         batch = new SpriteBatch();
         //gerando número randomico
@@ -68,6 +70,8 @@ public class FlappyBird extends ApplicationAdapter {
         passaros[0] = new Texture("passaro1.png");
         passaros[1] = new Texture("passaro2.png");
         passaros[2] = new Texture("passaro3.png");
+        //game over
+        gameOver = new Texture("game_over.png");
 
         //exibindo os canos
         fundo = new Texture("fundo.png");
@@ -102,33 +106,42 @@ public class FlappyBird extends ApplicationAdapter {
                 estadoJogo = 1;
             }
 
-        }else {
-            posicaoMovimentoCanoHorizontal -= deltaTime * 300;
-            velocidadeQueda++;
+        }else { //inicia
 
-            //Fazendo o passaro subir com o toque na tela
-            if (Gdx.input.justTouched()) {
-                velocidadeQueda = -15;
-            }
+            velocidadeQueda ++;
             //Fazendo ele descer caso não seja tocado na tela
             if (posicaoInicialVertical > 0 || velocidadeQueda < 0) {
                 posicaoInicialVertical = posicaoInicialVertical - velocidadeQueda;
             }
-            //Verifica se o cano saiu inteiramente da tela
-            if (posicaoMovimentoCanoHorizontal < -canoTopo.getWidth()) {
 
-                posicaoMovimentoCanoHorizontal = larguraDispositivo;
-                alturaEntreCanosRandomica = numeroRandomico.nextInt(400) - 200;
-                marcouPonto = false;
+            if(estadoJogo == 1){
 
-            }
-            //verificando pontuação
-            if(posicaoMovimentoCanoHorizontal < 120){
+                posicaoMovimentoCanoHorizontal -= deltaTime * 300;
 
-                if(!marcouPonto){
-                    pontuacao ++;
-                    marcouPonto = true;
+                //Fazendo o passaro subir com o toque na tela
+                if (Gdx.input.justTouched()) {
+                    velocidadeQueda = -15;
                 }
+
+                //Verifica se o cano saiu inteiramente da tela
+                if (posicaoMovimentoCanoHorizontal < -canoTopo.getWidth()) {
+
+                    posicaoMovimentoCanoHorizontal = larguraDispositivo;
+                    alturaEntreCanosRandomica = numeroRandomico.nextInt(400) - 200;
+                    marcouPonto = false;
+
+                }
+                //verificando pontuação
+                if(posicaoMovimentoCanoHorizontal < 120){
+
+                    if(!marcouPonto){
+                        pontuacao ++;
+                        marcouPonto = true;
+                    }
+                }
+            }else{ //tela game over
+
+
             }
         }
 
@@ -177,7 +190,8 @@ public class FlappyBird extends ApplicationAdapter {
 */
         //teste colisão
         if(Intersector.overlaps(circulo, retanguloCanoBaixo) || Intersector.overlaps(circulo, retanguloCanoTopo)){
-            Gdx.app.log("Colisao", "Houve colisão");
+           estadoJogo = 2;
+
         }
     }
 }
